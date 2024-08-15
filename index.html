@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Cards</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <!-- Video section containing all the video cards -->
+    <div class="video-section">
+        <!-- Individual video cards with unique IDs and thumbnails -->
+        <div class="video-card" id="video1">
+            <img src="thumbnail1.jpg" alt="Video 1">
+        </div>
+        <div class="video-card" id="video2">
+            <img src="thumbnail2.jpg" alt="Video 2">
+        </div>
+        <div class="video-card" id="video3">
+            <img src="thumbnail3.jpg" alt="Video 3">
+        </div>
+        <div class="video-card" id="video4">
+            <img src="thumbnail4.jpg" alt="Video 4">
+        </div>
+        <div class="video-card" id="video5">
+            <img src="thumbnail5.jpg" alt="Video 5">
+        </div>
+    </div>
+
+    <!-- Modal that appears when a video card is clicked -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-container">
+            <!-- Video element that will play the selected video -->
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                <!-- Fallback message for browsers that don't support the video tag -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="index.js"></script>
+</body>
+</html>

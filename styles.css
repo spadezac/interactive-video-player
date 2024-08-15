@@ -1,0 +1,242 @@
+/* Basic reset and setup for the body */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Container for the video cards */
+.video-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Individual video card styling */
+.video-card {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    margin: 0 -50px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    z-index: 1;
+}
+
+/* Styling for the video thumbnails */
+.video-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire card */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+/* Default stacking positions and sizes for the video cards */
+.video-card:nth-child(1) {
+    transform: translateX(-40px) scale(0.9);
+    z-index: 5;
+}
+
+.video-card:nth-child(2) {
+    transform: translateX(-20px) scale(0.8);
+    z-index: 4;
+}
+
+.video-card:nth-child(3) {
+    transform: translateX(0px) scale(0.7);
+    z-index: 3;
+}
+
+.video-card:nth-child(4) {
+    transform: translateX(10px) scale(0.6);
+    z-index: 2;
+}
+
+.video-card:nth-child(5) {
+    transform: translateX(-5px) scale(0.5);
+    z-index: 1;
+}
+
+/* Hover effect to bring the card to the front */
+.video-card:hover {
+    transform: scale(0.9); /* Enlarges the card slightly */
+    z-index: 10; /* Brings the card to the top */
+}
+
+/* Modal styling */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* Ensures the modal appears above all other content */
+}
+
+/* Active state for the modal */
+.video-modal.active {
+    display: flex;
+}
+
+/* Container for the video inside the modal */
+.video-container {
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Video element styling */
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive styles for different screen sizes */
+
+/* For screens <576px */
+@media (max-width: 575.98px) { 
+    .video-card {
+        width: 160px;
+        height: 300px;
+    }
+    .video-card:nth-child(1) {
+        transform: translateX(-20px) scale(0.9);
+    }
+    .video-card:nth-child(2) {
+        transform: translateX(-10px) scale(0.8);
+    }
+    .video-card:nth-child(3) {
+        transform: translateX(0px) scale(0.7);
+    }
+    .video-card:nth-child(4) {
+        transform: translateX(10px) scale(0.6);
+    }
+    .video-card:nth-child(5) {
+        transform: translateX(5px) scale(0.5);
+    }
+}
+
+/* For screens ≥576px */
+@media (min-width: 576px) { 
+    .video-card {
+        width: 180px;
+        height: 320px;
+    }
+    .video-card:nth-child(1) {
+        transform: translateX(-25px) scale(0.9);
+    }
+    .video-card:nth-child(2) {
+        transform: translateX(-15px) scale(0.8);
+    }
+    .video-card:nth-child(3) {
+        transform: translateX(0px) scale(0.7);
+    }
+    .video-card:nth-child(4) {
+        transform: translateX(10px) scale(0.6);
+    }
+    .video-card:nth-child(5) {
+        transform: translateX(5px) scale(0.5);
+    }
+}
+
+/* For screens ≥768px */
+@media (min-width: 768px) { 
+    .video-card {
+        width: 200px;
+        height: 370px;
+    }
+    .video-card:nth-child(1) {
+        transform: translateX(-30px) scale(0.9);
+    }
+    .video-card:nth-child(2) {
+        transform: translateX(-15px) scale(0.8);
+    }
+    .video-card:nth-child(3) {
+        transform: translateX(0px) scale(0.7);
+    }
+    .video-card:nth-child(4) {
+        transform: translateX(10px) scale(0.6);
+    }
+    .video-card:nth-child(5) {
+        transform: translateX(5px) scale(0.5);
+    }
+}
+
+/* For screens ≥992px */
+@media (min-width: 992px) { 
+    .video-card {
+        width: 220px;
+        height: 400px;
+    }
+    .video-card:nth-child(1) {
+        transform: translateX(-35px) scale(0.9);
+    }
+    .video-card:nth-child(2) {
+        transform: translateX(-20px) scale(0.8);
+    }
+    .video-card:nth-child(3) {
+        transform: translateX(0px) scale(0.7);
+    }
+    .video-card:nth-child(4) {
+        transform: translateX(10px) scale(0.6);
+    }
+    .video-card:nth-child(5) {
+        transform: translateX(5px) scale(0.5);
+    }
+}
+
+/* For screens ≥1200px */
+@media (min-width: 1200px) { 
+    .video-card {
+        width: 240px;
+        height: 440px;
+    }
+    .video-card:nth-child(1) {
+        transform: translateX(-40px) scale(0.9);
+    }
+    .video-card:nth-child(2) {
+        transform: translateX(-25px) scale(0.8);
+    }
+    .video-card:nth-child(3) {
+        transform: translateX(0px) scale(0.7);
+    }
+    .video-card:nth-child(4) {
+        transform: translateX(15px) scale(0.6);
+    }
+    .video-card:nth-child(5) {
+        transform: translateX(5px) scale(0.5);
+    }
+}
+
+/* For screens ≥1400px */
+@media (min-width: 1400px) { 
+    .video-card {
+        width: 290px;
+        height: 530px;
+    }
+    .video-card:nth-child(1) {
+        transform: translateX(-40px) scale(0.9);
+    }
+    .video-card:nth-child(2) {
+        transform: translateX(-20px) scale(0.8);
+    }
+    .video-card:nth-child(3) {
+        transform: translateX(0px) scale(0.7);
+    }
+    .video-card:nth-child(4) {
+        transform: translateX(10px) scale(0.6);
+    }
+    .video-card:nth-child(5) {
+        transform: translateX(-5px) scale(0.5);
+    }
+}
